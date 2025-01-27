@@ -37,7 +37,8 @@ router.post("/add-dessert", authenticateToken, async (req, res) => {
 router.put("/update-dessert", authenticateToken, async (req, res) => {
   try {
     const { id } = req.headers; // Authenticated user's ID
-    const { dessertId } = req.headers;
+    const { dessertId } = req.body;
+    console.log(req);
 
     const dessert = await Dessert.findById(dessertId);
 
@@ -55,7 +56,7 @@ router.put("/update-dessert", authenticateToken, async (req, res) => {
     await Dessert.findByIdAndUpdate(dessertId, {
       url: req.body.url,
       title: req.body.title,
-      shopName: req.body.author,
+      shopName: req.body.shopName,
       price: req.body.price,
       desc: req.body.desc,
       category: req.body.category, // Updated field
@@ -75,7 +76,7 @@ router.put("/update-dessert", authenticateToken, async (req, res) => {
 router.delete("/delete-dessert", authenticateToken, async (req, res) => {
   try {
     const { id } = req.headers; // Authenticated user's ID
-    const { dessertId } = req.headers;
+    const { dessertId } = req.body;
 
     const dessert = await Dessert.findById(dessertId);
 
@@ -175,7 +176,7 @@ router.get("/get-desserts-by-uploader", authenticateToken, async (req, res) => {
 // Get desserts by category (by category name or category ID)
 router.get("/get-desserts-by-category", async (req, res) => {
   try {
-    const { category } = req.headers;
+    const { category } = req.body;
 
     // Find desserts where the 'category' matches the provided category (name or ID)
     const desserts = await Dessert.find({ category })
