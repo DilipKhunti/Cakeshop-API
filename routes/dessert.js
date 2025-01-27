@@ -17,7 +17,7 @@ router.post("/add-dessert", authenticateToken, async (req, res) => {
     const dessert = new Dessert({
       url: req.body.url,
       title: req.body.title,
-      shopName: req.body.author,
+      shopName: req.body.shopName,
       price: req.body.price,
       desc: req.body.desc,
       uploader_id: id, // Use the authenticated user ID as the uploader_id
