@@ -2,9 +2,10 @@ const router = require("express").Router();
 const { authenticateToken } = require("./userAuth");
 const Dessert = require("../models/dessert");
 const Order = require("../models/order");
+const User = require("../models/user");
 
 //place order
-router.post("/place-oreder", authenticateToken, async (req, res) => {
+router.post("/place-order", authenticateToken, async (req, res) => {
   try {
     const { id } = req.headers;
     const { order } = req.body;
@@ -45,12 +46,8 @@ router.get("/get-order-history", authenticateToken, async (req, res) => {
     //     .json({ message: "You dont have access to perform this task" });
     // }
 
-    const userData = await User.findById(id).populate({
-      path: "orders",
-      populate: { path: "dessert" },
-    });
+    OrdersData = await Order.find({ user: id }).populate("dessert");
 
-    const OrdersData = userData.orders.reverse();
     return res.json({
       status: "Success",
       data: OrdersData,
@@ -64,6 +61,15 @@ router.get("/get-order-history", authenticateToken, async (req, res) => {
 //get all orders --admin
 router.get("/get-all-orders", authenticateToken, async (req, res) => {
   try {
+    const { id } = req.headers;
+
+    const user = await User.findById(id);
+    if (user.role !== "admin") {
+      return res
+        .status(400)
+        .json({ message: "You dont have access to perform this task" });
+    }
+
     const userData = await Order.find()
       .populate({
         path: "dessert",
@@ -84,10 +90,11 @@ router.get("/get-all-orders", authenticateToken, async (req, res) => {
 });
 
 // update order --admin
-router.put("/update-status/:id", authenticateToken, async (req, res) => {
+router.put("/update-status", authenticateToken, async (req, res) => {
   try {
-    const { id } = req.params;
-    await Order.findByIdAndUpdate(id, { status: req.body.status });
+
+    const { orderId } = req.query;
+    await Order.findByIdAndUpdate(orderId, { status: req.body.status });
 
     return res.json({
       status: "Success",

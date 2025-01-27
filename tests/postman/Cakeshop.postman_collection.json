@@ -1,0 +1,1166 @@
+{
+	"info": {
+		"_postman_id": "fa9ae044-61a5-4126-949b-861e18f61ec4",
+		"name": "Cakeshop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41483553"
+	},
+	"item": [
+		{
+			"name": "/sign-up",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"user\",\r\n    \"password\" : \"password\",\r\n    \"address\" : \"address\",\r\n    \"email\" : \"email@email.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:1000/api/v1/sign-up",
+					"host": [
+						"localhost"
+					],
+					"port": "1000",
+					"path": [
+						"api",
+						"v1",
+						"sign-up"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/sign-in",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"user\",\r\n    \"password\" : \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:1000/api/v1/sign-in",
+					"host": [
+						"localhost"
+					],
+					"port": "1000",
+					"path": [
+						"api",
+						"v1",
+						"sign-in"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/get-user-information",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "id",
+						"value": "6797840693c31a3f77470422",
+						"type": "text"
+					},
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRoQ2xhaW1zIjpbeyJuYW1lIjoidXNlciJ9LHsicm9sZSI6InVzZXIifV0sImlhdCI6MTczNzk4MzE0OCwiZXhwIjoxNzQwNTc1MTQ4fQ.jPBxbQJS9cw4DEUGgI34Kl_a4CUTE0DKT8H46Ldpsn4",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:1000/api/v1/get-user-information",
+					"host": [
+						"localhost"
+					],
+					"port": "1000",
+					"path": [
+						"api",
+						"v1",
+						"get-user-information"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/update-address",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "id",
+						"value": "6797840693c31a3f77470422",
+						"type": "text"
+					},
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRoQ2xhaW1zIjpbeyJuYW1lIjoidXNlciJ9LHsicm9sZSI6InVzZXIifV0sImlhdCI6MTczNzk4MzE0OCwiZXhwIjoxNzQwNTc1MTQ4fQ.jPBxbQJS9cw4DEUGgI34Kl_a4CUTE0DKT8H46Ldpsn4",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"address\" : \"address\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:1000/api/v1/update-address",
+					"host": [
+						"localhost"
+					],
+					"port": "1000",
+					"path": [
+						"api",
+						"v1",
+						"update-address"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/add-category",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "id",
+						"value": "6797840693c31a3f77470422",
+						"type": "text"
+					},
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRoQ2xhaW1zIjpbeyJuYW1lIjoidXNlciJ9LHsicm9sZSI6InVzZXIifV0sImlhdCI6MTczNzk4MzE0OCwiZXhwIjoxNzQwNTc1MTQ4fQ.jPBxbQJS9cw4DEUGgI34Kl_a4CUTE0DKT8H46Ldpsn4",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"dessert\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:1000/api/v1/add-category",
+					"host": [
+						"localhost"
+					],
+					"port": "1000",
+					"path": [
+						"api",
+						"v1",
+						"add-category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/get-all-categories",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "id",
+						"value": "6797840693c31a3f77470422",
+						"type": "text"
+					},
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRoQ2xhaW1zIjpbeyJuYW1lIjoidXNlciJ9LHsicm9sZSI6InVzZXIifV0sImlhdCI6MTczNzk4MzE0OCwiZXhwIjoxNzQwNTc1MTQ4fQ.jPBxbQJS9cw4DEUGgI34Kl_a4CUTE0DKT8H46Ldpsn4",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:1000/api/v1/get-all-categories",
+					"host": [
+						"localhost"
+					],
+					"port": "1000",
+					"path": [
+						"api",
+						"v1",
+						"get-all-categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/delete-category/category_id",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "id",
+						"value": "6797840693c31a3f77470422",
+						"type": "text"
+					},
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRoQ2xhaW1zIjpbeyJuYW1lIjoidXNlciJ9LHsicm9sZSI6InVzZXIifV0sImlhdCI6MTczNzk4MzE0OCwiZXhwIjoxNzQwNTc1MTQ4fQ.jPBxbQJS9cw4DEUGgI34Kl_a4CUTE0DKT8H46Ldpsn4",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:1000/api/v1/delete-category?categoryId=6797aaf2fe917ae36ca05995",
+					"host": [
+						"localhost"
+					],
+					"port": "1000",
+					"path": [
+						"api",
+						"v1",
+						"delete-category"
+					],
+					"query": [
+						{
+							"key": "categoryId",
+							"value": "6797aaf2fe917ae36ca05995"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/add-dessert",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "id",
+						"value": "6797840693c31a3f77470422",
+						"type": "text"
+					},
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRoQ2xhaW1zIjpbeyJuYW1lIjoidXNlciJ9LHsicm9sZSI6InVzZXIifV0sImlhdCI6MTczNzk4MzE0OCwiZXhwIjoxNzQwNTc1MTQ4fQ.jPBxbQJS9cw4DEUGgI34Kl_a4CUTE0DKT8H46Ldpsn4",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n      \"url\": \"https://zukachocolates.com/wp-content/uploads/2021/03/FULLY-LOADED-CHOCOLATE-TRUFFLE-CAKE-1.jpg\",\r\n      \"title\": \"test3\",\r\n      \"shopName\": \"dessert shop\",\r\n      \"price\": 123,\r\n      \"desc\": \"dessert description\",\r\n      \"uploader_id\": \"6797840693c31a3f77470422\", \r\n      \"category\": \"67978941249e279982f10efd\", \r\n      \"stock\": 45 \r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:1000/api/v1/add-dessert",
+					"host": [
+						"localhost"
+					],
+					"port": "1000",
+					"path": [
+						"api",
+						"v1",
+						"add-dessert"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/update-dessert",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "id",
+						"value": "6797840693c31a3f77470422",
+						"type": "text"
+					},
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRoQ2xhaW1zIjpbeyJuYW1lIjoidXNlciJ9LHsicm9sZSI6InVzZXIifV0sImlhdCI6MTczNzk4MzE0OCwiZXhwIjoxNzQwNTc1MTQ4fQ.jPBxbQJS9cw4DEUGgI34Kl_a4CUTE0DKT8H46Ldpsn4",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dessertId\" : \"67978aeb621931dc6e5af9ce\",\r\n      \"url\": \"https://zukachocolates.com/wp-content/uploads/2021/03/FULLY-LOADED-CHOCOLATE-TRUFFLE-CAKE-1.jpg\",\r\n      \"title\": \"new name\",\r\n      \"shopName\": \"dessert shop\",\r\n      \"price\": 123,\r\n      \"desc\": \"dessert description\",\r\n      \"uploader_id\": \"6797840693c31a3f77470422\", // Use the authenticated user ID as the uploader_id\r\n      \"category\": \"67978941249e279982f10efd\", // Reference to category\r\n      \"stock\": 45 // New field for stock\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:1000/api/v1/update-dessert",
+					"host": [
+						"localhost"
+					],
+					"port": "1000",
+					"path": [
+						"api",
+						"v1",
+						"update-dessert"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/delete-dessert",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "id",
+						"value": "6797840693c31a3f77470422",
+						"type": "text"
+					},
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRoQ2xhaW1zIjpbeyJuYW1lIjoidXNlciJ9LHsicm9sZSI6InVzZXIifV0sImlhdCI6MTczNzk4MzE0OCwiZXhwIjoxNzQwNTc1MTQ4fQ.jPBxbQJS9cw4DEUGgI34Kl_a4CUTE0DKT8H46Ldpsn4",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dessertId\" : \"67978aeb621931dc6e5af9ce\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:1000/api/v1/delete-dessert",
+					"host": [
+						"localhost"
+					],
+					"port": "1000",
+					"path": [
+						"api",
+						"v1",
+						"delete-dessert"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/get-all-desserts",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "id",
+						"value": "6797840693c31a3f77470422",
+						"type": "text"
+					},
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRoQ2xhaW1zIjpbeyJuYW1lIjoidXNlciJ9LHsicm9sZSI6InVzZXIifV0sImlhdCI6MTczNzk4MzE0OCwiZXhwIjoxNzQwNTc1MTQ4fQ.jPBxbQJS9cw4DEUGgI34Kl_a4CUTE0DKT8H46Ldpsn4",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:1000/api/v1/get-all-desserts",
+					"host": [
+						"localhost"
+					],
+					"port": "1000",
+					"path": [
+						"api",
+						"v1",
+						"get-all-desserts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/get-dessert-by-id?dessertId=",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "id",
+						"value": "6797840693c31a3f77470422",
+						"type": "text"
+					},
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRoQ2xhaW1zIjpbeyJuYW1lIjoidXNlciJ9LHsicm9sZSI6InVzZXIifV0sImlhdCI6MTczNzk4MzE0OCwiZXhwIjoxNzQwNTc1MTQ4fQ.jPBxbQJS9cw4DEUGgI34Kl_a4CUTE0DKT8H46Ldpsn4",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:1000/api/v1/get-dessert-by-id?dessertId=67978af4621931dc6e5af9d2",
+					"host": [
+						"localhost"
+					],
+					"port": "1000",
+					"path": [
+						"api",
+						"v1",
+						"get-dessert-by-id"
+					],
+					"query": [
+						{
+							"key": "dessertId",
+							"value": "67978af4621931dc6e5af9d2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/get-desserts-by-uploader",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "id",
+						"value": "6797840693c31a3f77470422",
+						"type": "text"
+					},
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRoQ2xhaW1zIjpbeyJuYW1lIjoidXNlciJ9LHsicm9sZSI6InVzZXIifV0sImlhdCI6MTczNzk4MzE0OCwiZXhwIjoxNzQwNTc1MTQ4fQ.jPBxbQJS9cw4DEUGgI34Kl_a4CUTE0DKT8H46Ldpsn4",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:1000/api/v1/get-desserts-by-uploader",
+					"host": [
+						"localhost"
+					],
+					"port": "1000",
+					"path": [
+						"api",
+						"v1",
+						"get-desserts-by-uploader"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/get-desserts-by-category",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "id",
+						"value": "6797840693c31a3f77470422",
+						"type": "text"
+					},
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRoQ2xhaW1zIjpbeyJuYW1lIjoidXNlciJ9LHsicm9sZSI6InVzZXIifV0sImlhdCI6MTczNzk4MzE0OCwiZXhwIjoxNzQwNTc1MTQ4fQ.jPBxbQJS9cw4DEUGgI34Kl_a4CUTE0DKT8H46Ldpsn4",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"category\" : \"67978941249e279982f10efd\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:1000/api/v1/get-desserts-by-category",
+					"host": [
+						"localhost"
+					],
+					"port": "1000",
+					"path": [
+						"api",
+						"v1",
+						"get-desserts-by-category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/search-desserts?search=",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "id",
+						"value": "6797840693c31a3f77470422",
+						"type": "text"
+					},
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRoQ2xhaW1zIjpbeyJuYW1lIjoidXNlciJ9LHsicm9sZSI6InVzZXIifV0sImlhdCI6MTczNzk4MzE0OCwiZXhwIjoxNzQwNTc1MTQ4fQ.jPBxbQJS9cw4DEUGgI34Kl_a4CUTE0DKT8H46Ldpsn4",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:1000/api/v1/search-desserts?search=name",
+					"host": [
+						"localhost"
+					],
+					"port": "1000",
+					"path": [
+						"api",
+						"v1",
+						"search-desserts"
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "name"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/get-recent-desserts",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "id",
+						"value": "6797840693c31a3f77470422",
+						"type": "text"
+					},
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRoQ2xhaW1zIjpbeyJuYW1lIjoidXNlciJ9LHsicm9sZSI6InVzZXIifV0sImlhdCI6MTczNzk4MzE0OCwiZXhwIjoxNzQwNTc1MTQ4fQ.jPBxbQJS9cw4DEUGgI34Kl_a4CUTE0DKT8H46Ldpsn4",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:1000/api/v1/get-recent-desserts",
+					"host": [
+						"localhost"
+					],
+					"port": "1000",
+					"path": [
+						"api",
+						"v1",
+						"get-recent-desserts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/add-to-cart?dessertId=",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "id",
+						"value": "6797840693c31a3f77470422",
+						"type": "text"
+					},
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRoQ2xhaW1zIjpbeyJuYW1lIjoidXNlciJ9LHsicm9sZSI6InVzZXIifV0sImlhdCI6MTczNzk4MzE0OCwiZXhwIjoxNzQwNTc1MTQ4fQ.jPBxbQJS9cw4DEUGgI34Kl_a4CUTE0DKT8H46Ldpsn4",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:1000/api/v1/add-to-cart?dessertId=67978af0621931dc6e5af9d0",
+					"host": [
+						"localhost"
+					],
+					"port": "1000",
+					"path": [
+						"api",
+						"v1",
+						"add-to-cart"
+					],
+					"query": [
+						{
+							"key": "dessertId",
+							"value": "67978af0621931dc6e5af9d0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/remove-from-cart?dessertId=",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "id",
+						"value": "6797840693c31a3f77470422",
+						"type": "text"
+					},
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRoQ2xhaW1zIjpbeyJuYW1lIjoidXNlciJ9LHsicm9sZSI6InVzZXIifV0sImlhdCI6MTczNzk4MzE0OCwiZXhwIjoxNzQwNTc1MTQ4fQ.jPBxbQJS9cw4DEUGgI34Kl_a4CUTE0DKT8H46Ldpsn4",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:1000/api/v1/remove-from-cart?dessertId=67978af0621931dc6e5af9d0",
+					"host": [
+						"localhost"
+					],
+					"port": "1000",
+					"path": [
+						"api",
+						"v1",
+						"remove-from-cart"
+					],
+					"query": [
+						{
+							"key": "dessertId",
+							"value": "67978af0621931dc6e5af9d0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/get-user-cart",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "id",
+						"value": "6797840693c31a3f77470422",
+						"type": "text"
+					},
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRoQ2xhaW1zIjpbeyJuYW1lIjoidXNlciJ9LHsicm9sZSI6InVzZXIifV0sImlhdCI6MTczNzk4MzE0OCwiZXhwIjoxNzQwNTc1MTQ4fQ.jPBxbQJS9cw4DEUGgI34Kl_a4CUTE0DKT8H46Ldpsn4",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:1000/api/v1/get-user-cart",
+					"host": [
+						"localhost"
+					],
+					"port": "1000",
+					"path": [
+						"api",
+						"v1",
+						"get-user-cart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/add-dessert-to-favourite?desertId=",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "id",
+						"value": "6797840693c31a3f77470422",
+						"type": "text"
+					},
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRoQ2xhaW1zIjpbeyJuYW1lIjoidXNlciJ9LHsicm9sZSI6InVzZXIifV0sImlhdCI6MTczNzk4MzE0OCwiZXhwIjoxNzQwNTc1MTQ4fQ.jPBxbQJS9cw4DEUGgI34Kl_a4CUTE0DKT8H46Ldpsn4",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:1000/api/v1/add-dessert-to-favourite?dessertId=67978aca621931dc6e5af9cc",
+					"host": [
+						"localhost"
+					],
+					"port": "1000",
+					"path": [
+						"api",
+						"v1",
+						"add-dessert-to-favourite"
+					],
+					"query": [
+						{
+							"key": "dessertId",
+							"value": "67978aca621931dc6e5af9cc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/remove-dessert-from-favourite?dessertId=",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "id",
+						"value": "6797840693c31a3f77470422",
+						"type": "text"
+					},
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRoQ2xhaW1zIjpbeyJuYW1lIjoidXNlciJ9LHsicm9sZSI6InVzZXIifV0sImlhdCI6MTczNzk4MzE0OCwiZXhwIjoxNzQwNTc1MTQ4fQ.jPBxbQJS9cw4DEUGgI34Kl_a4CUTE0DKT8H46Ldpsn4",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:1000/api/v1/remove-dessert-from-favourite?dessertId=67978aca621931dc6e5af9cc",
+					"host": [
+						"localhost"
+					],
+					"port": "1000",
+					"path": [
+						"api",
+						"v1",
+						"remove-dessert-from-favourite"
+					],
+					"query": [
+						{
+							"key": "dessertId",
+							"value": "67978aca621931dc6e5af9cc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/get-favourite-desserts",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "id",
+						"value": "6797840693c31a3f77470422",
+						"type": "text"
+					},
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRoQ2xhaW1zIjpbeyJuYW1lIjoidXNlciJ9LHsicm9sZSI6InVzZXIifV0sImlhdCI6MTczNzk4MzE0OCwiZXhwIjoxNzQwNTc1MTQ4fQ.jPBxbQJS9cw4DEUGgI34Kl_a4CUTE0DKT8H46Ldpsn4",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:1000/api/v1/get-favourite-desserts",
+					"host": [
+						"localhost"
+					],
+					"port": "1000",
+					"path": [
+						"api",
+						"v1",
+						"get-favourite-desserts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/place-order",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "id",
+						"value": "6797840693c31a3f77470422",
+						"type": "text"
+					},
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRoQ2xhaW1zIjpbeyJuYW1lIjoidXNlciJ9LHsicm9sZSI6InVzZXIifV0sImlhdCI6MTczNzk4MzE0OCwiZXhwIjoxNzQwNTc1MTQ4fQ.jPBxbQJS9cw4DEUGgI34Kl_a4CUTE0DKT8H46Ldpsn4",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"order\" : [\"6797840693c31a3f77470422\", \"6797840693c31a3f77470422\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:1000/api/v1/place-order",
+					"host": [
+						"localhost"
+					],
+					"port": "1000",
+					"path": [
+						"api",
+						"v1",
+						"place-order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/get-order-history",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "id",
+						"value": "6797840693c31a3f77470422",
+						"type": "text"
+					},
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRoQ2xhaW1zIjpbeyJuYW1lIjoidXNlciJ9LHsicm9sZSI6InVzZXIifV0sImlhdCI6MTczNzk4MzE0OCwiZXhwIjoxNzQwNTc1MTQ4fQ.jPBxbQJS9cw4DEUGgI34Kl_a4CUTE0DKT8H46Ldpsn4",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:1000/api/v1/get-order-history",
+					"host": [
+						"localhost"
+					],
+					"port": "1000",
+					"path": [
+						"api",
+						"v1",
+						"get-order-history"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/get-all-orders",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "id",
+						"value": "6797840693c31a3f77470422",
+						"type": "text"
+					},
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRoQ2xhaW1zIjpbeyJuYW1lIjoidXNlciJ9LHsicm9sZSI6InVzZXIifV0sImlhdCI6MTczNzk4MzE0OCwiZXhwIjoxNzQwNTc1MTQ4fQ.jPBxbQJS9cw4DEUGgI34Kl_a4CUTE0DKT8H46Ldpsn4",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:1000/api/v1/get-all-orders",
+					"host": [
+						"localhost"
+					],
+					"port": "1000",
+					"path": [
+						"api",
+						"v1",
+						"get-all-orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/update-status?orderId=",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "id",
+						"value": "6797840693c31a3f77470422",
+						"type": "text"
+					},
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRoQ2xhaW1zIjpbeyJuYW1lIjoidXNlciJ9LHsicm9sZSI6InVzZXIifV0sImlhdCI6MTczNzk4MzE0OCwiZXhwIjoxNzQwNTc1MTQ4fQ.jPBxbQJS9cw4DEUGgI34Kl_a4CUTE0DKT8H46Ldpsn4",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"status\" : \"Out for delivery\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:1000/api/v1/update-status?orderId=6797a912fcd52a737c2c81e8",
+					"host": [
+						"localhost"
+					],
+					"port": "1000",
+					"path": [
+						"api",
+						"v1",
+						"update-status"
+					],
+					"query": [
+						{
+							"key": "orderId",
+							"value": "6797a912fcd52a737c2c81e8"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

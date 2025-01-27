@@ -5,7 +5,9 @@ const { authenticateToken } = require("./userAuth");
 // put dessert to cart
 router.put("/add-to-cart", authenticateToken, async (req, res) => {
   try {
-    const { dessertId, id } = req.headers;
+    const { id } = req.headers;
+    const {dessertId} = req.query;
+
     const userData = await User.findById(id);
     const isDessertInCart = userData.cart.includes(dessertId);
 
@@ -31,9 +33,9 @@ router.put("/add-to-cart", authenticateToken, async (req, res) => {
 });
 
 // remove from cart
-router.put("/remove-from-cart/:dessertId", authenticateToken, async (req, res) => {
+router.put("/remove-from-cart", authenticateToken, async (req, res) => {
   try {
-    const { dessertId } = req.params;
+    const { dessertId } = req.query;
     const { id } = req.headers;
     
     await User.findByIdAndUpdate(id, {

@@ -5,7 +5,9 @@ const { authenticateToken } = require("./userAuth");
 //add dessert to favorites
 router.put("/add-dessert-to-favourite", authenticateToken, async (req, res) => {
   try {
-    const { dessertId, id } = req.headers;
+    const { id } = req.headers;
+    const { dessertId } = req.query;
+
     const userData = await User.findById(id);
     const isDessertFavourite = userData.favourites.includes(dessertId);
 
@@ -26,7 +28,9 @@ router.put(
   authenticateToken,
   async (req, res) => {
     try {
-      const { dessertId, id } = req.headers;
+      const { id } = req.headers;
+      const { dessertId } = req.query;
+
       const userData = await User.findById(id);
       const isDessertFavourite = userData.favourites.includes(dessertId);
 

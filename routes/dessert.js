@@ -136,10 +136,10 @@ router.get("/get-recent-desserts", async (req, res) => {
 });
 
 // Get dessert by ID
-router.get("/get-dessert-by-id/:id", async (req, res) => {
+router.get("/get-dessert-by-id", async (req, res) => {
   try {
-    const { id } = req.params;
-    const dessert = await Dessert.findById(id).populate("category");
+    const { dessertId } = req.query;
+    const dessert = await Dessert.findById(dessertId).populate("category");
     if (!dessert) {
       return res.status(404).json({ message: "Dessert not found" });
     }

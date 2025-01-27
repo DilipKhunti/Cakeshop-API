@@ -58,15 +58,15 @@ router.get("/get-all-categories", async (req, res) => {
 
 // Delete a category (Admin only)
 router.delete(
-  "/delete-category/:id",
+  "/delete-category/",
   authenticateToken,
   checkAdmin,
   async (req, res) => {
     try {
-      const { id } = req.params; // Get the category ID from URL params
+      const { categoryId } = req.query;
 
       // Find and delete the category by ID
-      const category = await Category.findByIdAndDelete(id);
+      const category = await Category.findByIdAndDelete(categoryId);
 
       if (!category) {
         return res.status(404).json({ message: "Category not found" });
