@@ -24,6 +24,10 @@ app.use("/api/v1", Cart);
 app.use("/api/v1", Order);
 app.use("/api/v1", Category); // Use the category routes
 
+app.get("/", (req, res) => {
+  res.send("Hello World");
+});
+
 // Creating port
 app.listen(process.env.PORT, () => {
   console.log(`Server Started at Port ${process.env.PORT}`);
