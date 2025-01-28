@@ -1,6 +1,6 @@
 // app.js or server.js
 const express = require("express");
-const cors = require("cors");
+// const cors = require("cors");
 const app = express();
 app.use(express.json());
 require("dotenv").config();
@@ -14,7 +14,7 @@ const Cart = require("./routes/cart");
 const Category = require("./routes/category");
 
 // Enable CORS for all requests
-app.use(cors());
+// app.use(cors());
 
 // Routes
 app.use("/api/v1", User);
